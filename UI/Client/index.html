@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEGAPI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>EEGAPI</h1>
+
+        <!-- EEG Signal Plot -->
+        <div class="chart-container">
+            <div class="controls">
+                <label for="channel-select">Select Channel:</label>
+                <select id="channel-select">
+                    <option value="CH1">CH1</option>
+                    <option value="CH2">CH2</option>
+                    <option value="CH3">CH3</option>
+                    <option value="CH4">CH4</option>
+                    <option value="CH5">CH5</option>
+                    <option value="CH6">CH6</option>
+                    <option value="CH7">CH7</option>
+                    <option value="CH8">CH8</option>
+                </select>
+                <button id="plot-btn">Plot</button>
+                <button id="stop-btn">Stop</button>
+                <button id="save-btn" style="color: green;">Save</button>
+            </div>
+            <div id="plot-window">
+                <canvas id="eeg-plot"></canvas>
+            </div>
+        </div>
+
+        <!-- EEG Wave Types Plot -->
+        <div class="chart-container">
+            <div class="controls">
+                <label for="wave-select">Select Wave Type:</label>
+                <select id="wave-select">
+                    <option value="alpha">Alpha</option>
+                    <option value="beta">Beta</option>
+                    <option value="gamma">Gamma</option>
+                    <option value="delta">Delta</option>
+                    <option value="theta">Theta</option>
+                </select>
+                <label for="wave-channel-select">Select Channel:</label>
+                <select id="wave-channel-select">
+                    <option value="CH1">CH1</option>
+                    <option value="CH2">CH2</option>
+                    <option value="CH3">CH3</option>
+                    <option value="CH4">CH4</option>
+                    <option value="CH5">CH5</option>
+                    <option value="CH6">CH6</option>
+                    <option value="CH7">CH7</option>
+                    <option value="CH8">CH8</option>
+                </select>
+                <button id="plot-wave-btn">Plot</button>
+                <button id="stop-wave-btn">Stop</button>
+                <button id="save-wave-btn" style="color: green;">Save</button>
+            </div>
+            <div id="wave-plot-window">
+                <canvas id="wave-plot"></canvas>
+            </div>
+        </div>
+
+        <!-- PSD Plot -->
+        <div class="chart-container">
+            <div class="controls">
+                <label for="psd-select">Select Channel:</label>
+                <select id="psd-select">
+                    <option value="CH1">CH1</option>
+                    <option value="CH2">CH2</option>
+                    <option value="CH3">CH3</option>
+                    <option value="CH4">CH4</option>
+                    <option value="CH5">CH5</option>
+                    <option value="CH6">CH6</option>
+                    <option value="CH7">CH7</option>
+                    <option value="CH8">CH8</option>
+                </select>
+                <button id="plot-psd-btn">Plot</button>
+                <button id="stop-psd-btn">Stop</button>
+                <button id="save-psd-btn" style="color: green;">Save</button>
+            </div>
+            <div id="psd-plot-window">
+                <canvas id="psd-plot"></canvas>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
