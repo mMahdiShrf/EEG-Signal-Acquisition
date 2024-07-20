@@ -1,0 +1,6 @@
+asyncio
+numpy
+pymongo
+aiohttp
+aiohttp_cors
+mne
